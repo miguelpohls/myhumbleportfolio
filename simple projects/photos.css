@@ -1,0 +1,18 @@
+img{
+	width: 30%;
+	float: left;
+	margin: 1.66%;
+}
+/*img:hover{
+	border: .5px solid #f1f1f1;
+}*/
+p{
+	font-family: 'Playfair Display', serif;
+	margin: 1.66%;
+	font-size: 23px;
+	text-transform: uppercase;
+	font-weight: 800;
+	border-bottom: solid 2px #f1f1f1;
+	width: 30%;
+	padding-bottom: 20px;
+}

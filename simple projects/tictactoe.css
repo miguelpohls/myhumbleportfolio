@@ -1,0 +1,48 @@
+h1{
+	text-align: center;
+}
+table{
+	margin: auto;
+}
+.first{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.first + td{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.first + td + td{
+	border-bottom: 2px solid black;
+	padding: 100px;
+}
+.second{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.second + td{
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.second + td + td{
+	border-bottom: 2px solid black;
+	padding: 100px;
+}
+.third{
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.third + td{
+	border-right: 2px solid black;
+	padding: 100px;
+}
+.third + td + td{
+	padding: 100px;
+}
+td:hover {
+	border: 1px solid gray;
+}
