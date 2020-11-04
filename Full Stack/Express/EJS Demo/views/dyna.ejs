@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<h1>
+	Yo amo a la mima <%= gatubela %>
+</h1>
+
+
+<% if(gatubela.toLowerCase() === "ebi"){ %>
+<p>
+	Tienes razรณn, esa gatubela estรก hermosa.
+</p>
+<% } else { %>
+<p>
+	Las demรกs tambien estรกn hermosas.
+</p>
+<% } %>
+
+<% include partials/footer %>
