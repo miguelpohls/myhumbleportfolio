@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cooking 4 You</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6a5c9f3167.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">//$(function() {
+//  $('a[href*="#"]:not([href="#"])').click(function() {
+//    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//      var target = $(this.hash);
+//      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//      if (target.length) {
+//        $('html, body').animate({
+//          scrollTop: target.offset().top
+//        }, 1000);
+//        return false;
+//      }
+//    }
+//  });
+//});
+
+$(document).ready(function(){
+    $( "a.scrollLink" ).click(function( event ) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+    });
+});
+
+function randomImage(){
+  var images = [
+   'https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_960_720.jpg',
+   'https://cdn.pixabay.com/photo/2016/02/05/15/34/pasta-1181189_960_720.jpg',
+   'https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_960_720.jpg'];
+  var size = images.length;
+  var x = Math.floor(size * Math.random());
+  console.log(x);
+  var element = document.getElementsByTagName('header');
+  console.log(element);
+  element[0].style["background-image"] = "url("+ images[x] + ")";
+}
+
+document.addEventListener("DOMContentLoaded", randomImage);
+</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<style type="text/css">
+		body {
+	margin: 0;
+}
+
+header {
+	background-image: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_960_720.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1{
+	color: white;
+	font-family: 'Poiret One', cursive;
+	font-size: 10em;
+	margin-bottom: 15px; 
+}
+#info {
+	text-transform: uppercase;
+	margin-top: 2vh;
+	font-family: 'Open Sans', sans-serif;
+}
+#info, #info:focus, #info:active {
+      text-decoration: none;
+      color: inherit;
+      padding: 10px;
+ }
+ #info:hover {
+ 	text-decoration: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 5px;	
+ }
+header p {
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F1EFEF;
+}
+#nosotros {
+	margin-top: 5vh;
+}
+#cards {
+  max-width: 1200px;
+  display: flex;
+  border-radius: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+ }
+#cards section {
+	background-color: white;
+	display: flex;
+	padding: 2em;
+	flex-basis: 100%;
+	background-color: white;
+	border-radius: 10px;
+	margin: 5px;
+	flex-direction: column;
+	align-items: center;
+}
+#cards img {
+	width: 20vw;
+	border-radius: 5px;
+}
+#cards p{
+	width: 80%;
+	text-align: justify;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	line-height: 2rem;
+}
+#email {
+	margin-top: 20px;
+}
+footer{
+	display: flex;
+}
+.fas {
+	margin-left: 5px;
+	font-size: .7em;
+}
+#second-header {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+section h4 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+section h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 800px){
+	#cards {
+		display: flex;
+		flex-direction: column;
+	}
+	#cards img {
+		width: 20vw!important;
+		border-radius: 5px;
+	}
+	#photos {
+		height: 1px;
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	h1 {
+		font-size: 8em;
+		margin-bottom: 20px; 
+	}
+	#info {
+		font-size: 1.5rem;
+	}
+}
+
+	</style>
+	<header>
+		<h1>Cooking 4 You</h1>	
+		<p><a href="#main" id="info" class="scrollLink">Más Info <i class="fas fa-chevron-down"></i></a></p>
+	</header>
+
+	<main id="main">
+		<div id="nosotros">
+			<h3 id="second-header">Conoce más sobre nosotros</h3>
+		</div>
+		<section id="cards">
+			<section id="sectionLeft">
+				<h4>¿Quienes Somos? <i class="fas fa-pizza-slice"></i></h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<a href="info.html">Conoce más</a>
+			</section>
+			<section id="sectionCenter">
+				<h4>Menú <i class="fas fa-utensils"></i></h4>
+				<p>Galería de nuestras recetas</p>
+				<section id="photos">
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+ 				 <div class="carousel-inner">
+ 				   <div class="carousel-item active">
+ 				     <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/06/01/23/43/pasta-794464_960_720.jpg" alt="First slide">
+ 				   </div>
+ 				   <div class="carousel-item">
+ 				     <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/08/07/07/18/table-2600954_960_720.jpg" alt="Second slide">
+ 				   </div>
+ 				   <div class="carousel-item">
+ 				     <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/01/19/18/02/pastas-1150032_960_720.jpg" alt="Third slide">
+ 				   </div>
+ 				 </div>
+ 				 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+ 				   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+ 				   <span class="sr-only">Previous</span>
+ 				 </a>
+ 				 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+ 				   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+ 				   <span class="sr-only">Next</span>
+ 				 </a>
+				</div>
+				</section>
+				<a href="">Conoce más</a>
+			</section>
+			<section id="sectionRight">
+				<h4>Contacto</h4>
+				<p>Nuestra información de contacto</p>
+				<section>
+					<h3>Teléfonos</h3>
+					<p><i class="fab fa-whatsapp"></i> 55 6074 1631</p>
+					<p><i class="fab fa-whatsapp"></i> 55 3463 0649</p>
+					<p><i class="fas fa-phone-alt"></i> 55 5920 0557</p>
+					<h3 id="email">Email</h3>
+					<p></i> ciciaa406@gmail.com</p>
+				</section>
+			</section>
+		</section>
+	</main>
+
+	<footer>
+		<p>Creado por</p>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

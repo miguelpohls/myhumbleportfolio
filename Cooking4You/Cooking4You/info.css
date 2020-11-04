@@ -1,0 +1,57 @@
+.display-4 {
+	font-family: 'Playfair Display', serif;
+}
+main {
+
+}
+
+
+hr	{
+	line-height: 2px;
+	border-top: 2px solid black;
+}
+
+#owners {
+	display: flex;
+	flex-direction: row;
+}
+.person {
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 5px;
+	padding:10px;
+	padding-bottom: 20px;	
+	align-items: center;
+}
+.person h3{
+	font-family: 'Playfair Display', serif;
+}
+.person h4{
+	font-family: 'Playfair Display', serif;
+}
+.person p {
+	text-align: justify;
+	font-family: 'Playfair Display', serif;
+}
+
+.person:hover {
+	background-color:  #F1EFEF;
+}
+
+.go-back {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+img	{
+	width: 80%;
+	border-bottom: 20px;
+	border-radius: 5px;
+
+}
+
+footer div{
+	height: 40px;
+	background-color:  #F1EFEF; 
+}

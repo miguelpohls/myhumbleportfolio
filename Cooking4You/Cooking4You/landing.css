@@ -1,0 +1,129 @@
+body {
+	margin: 0;
+}
+
+header {
+	background-image: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_960_720.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1{
+	color: white;
+	font-family: 'Poiret One', cursive;
+	font-size: 10em;
+	margin-bottom: 15px; 
+}
+#info {
+	text-transform: uppercase;
+	margin-top: 2vh;
+	font-family: 'Open Sans', sans-serif;
+}
+#info, #info:focus, #info:active {
+      text-decoration: none;
+      color: inherit;
+      padding: 10px;
+ }
+ #info:hover {
+ 	text-decoration: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 5px;	
+ }
+header p {
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F1EFEF;
+}
+#nosotros {
+	margin-top: 5vh;
+}
+#cards {
+  max-width: 1200px;
+  display: flex;
+  border-radius: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+ }
+#cards section {
+	background-color: white;
+	display: flex;
+	padding: 2em;
+	flex-basis: 100%;
+	background-color: white;
+	border-radius: 10px;
+	margin: 5px;
+	flex-direction: column;
+	align-items: center;
+}
+#cards img {
+	width: 20vw;
+	border-radius: 5px;
+}
+#cards p{
+	width: 80%;
+	text-align: justify;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	line-height: 2rem;
+}
+#email {
+	margin-top: 20px;
+}
+footer{
+	display: flex;
+}
+.fas {
+	margin-left: 5px;
+	font-size: .7em;
+}
+#second-header {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+section h4 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+section h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 800px){
+	#cards {
+		display: flex;
+		flex-direction: column;
+	}
+	#cards img {
+		width: 20vw!important;
+		border-radius: 5px;
+	}
+	#photos {
+		height: 1px;
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	h1 {
+		font-size: 8em;
+		margin-bottom: 20px; 
+	}
+	#info {
+		font-size: 1.5rem;
+	}
+}
